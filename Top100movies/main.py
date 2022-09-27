@@ -9,7 +9,7 @@ top_movies = response.text
 soup = BeautifulSoup(top_movies,"html.parser")
 
 
-top = soup.find_all("h3",class_="title") # doesent creat a list 
+top = soup.find_all("h3",class_="title") # doesent creat a list
 with open("movies.txt",'w',encoding="utf8") as file:
     for i in top[::-1]:
         movies=i.getText()
